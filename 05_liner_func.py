@@ -19,9 +19,15 @@ if st.button('Print'):
     # st.write("You clicked the button!")
     # ==========================
     # 表示
-
-    x = np.linspace(-10, 10, 100)
+    x_min, x_max = -10, 10
+    y_min, y_max = -10, 10
+    x = np.linspace(x_min, x_max, 100)
     y = a * x + b
 
     plt.plot(x, y)
+    plt.xlim(x_min, x_max)
+    plt.ylim(y_min, y_max)
+    plt.axhline(0, color='black', lw=1) #  x軸
+    plt.axvline(0, color='black', lw=1) #  y軸
+    plt.grid()
     st.pyplot(plt)
