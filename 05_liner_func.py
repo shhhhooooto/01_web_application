@@ -25,10 +25,12 @@ if st.button('Print'):
     y = a * x + b
 
     plt.title(f"y={a}x+{b}")
-    plt.text(1, 1, "O", fontsize=20, ha='center', va='center')
+    plt.text(1, 1, "O", fontsize=10, ha='center', va='center')
     plt.plot(x, y, color="r", linewidth=2)
     plt.xlim(x_min, x_max)
     plt.ylim(y_min, y_max)
+    plt.xticks(np.arange(x_min, x_max + 1, 1))
+    plt.yticks(np.arange(y_min, y_max + 1, 1))
     plt.axhline(0, color='black', lw=1) #  x軸
     plt.axvline(0, color='black', lw=1) #  y軸
     plt.grid()
