@@ -24,7 +24,9 @@ if st.button('Print'):
     x = np.linspace(x_min, x_max, 100)
     y = a * x + b
 
-    plt.plot(x, y)
+    plt.title(f"y={a}x+{b}")
+    plt.text(1, 1, "O", fontsize=20, ha='center', va='center')
+    plt.plot(x, y, color="r", linewidth=2)
     plt.xlim(x_min, x_max)
     plt.ylim(y_min, y_max)
     plt.axhline(0, color='black', lw=1) #  x軸
