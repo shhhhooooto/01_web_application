@@ -25,7 +25,7 @@ if st.button('Print'):
     y = a * x + b
 
     plt.title(f"y={a}x+{b}")
-    plt.text(1, 1, "O", fontsize=10, ha='center', va='center')
+    plt.text(0.3, 0.3, "O", fontsize=10, ha='center', va='center')
     plt.plot(x, y, color="r", linewidth=2)
     plt.xlim(x_min, x_max)
     plt.ylim(y_min, y_max)
