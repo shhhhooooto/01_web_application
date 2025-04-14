@@ -13,7 +13,7 @@ n_min, n_max, n0 = 0, 1000, 100
 n = st.slider("出会う異性の数: n", n_min, n_max, n0)
 
 # p: 1人から好かれる確率
-p_min, p_max, p0 = 0, 1, 0.5
+p_min, p_max, p0 = 0.0, 1.0, 0.5
 p = st.slider("1人の異性から好かれる確率(≒モテ度): p", p_min, p_max, p0)
 
 st.write(f"n={n}, p={p}")
