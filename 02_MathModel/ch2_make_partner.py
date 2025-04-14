@@ -5,9 +5,10 @@ import numpy as np
 # 初期設定
 st.latex("1人以上の異性から好かれる確率: 1 - (1 - p)^n")
 def P_loved(n, p):
-    p = p / 100 # 確率を%から0-1に変換
+    p /= 100 # 確率を%から0-1に変換
     P = 1 - (1 - p)**n
-    return np.round(P, 2)
+    P *= 100
+    return np.round(P*100, 2)
 # ==========================
 
 # 出会う異性の数 (人)
