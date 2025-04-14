@@ -5,7 +5,9 @@ import numpy as np
 # 初期設定
 st.latex("1人以上の異性から好かれる確率: 1 - (1 - p)^n")
 def P_loved(n, p):
-    return 1 - (1 - p)**n
+    p = p / 100 # 確率を%から0-1に変換
+    P = 1 - (1 - p)**n
+    return np.round(P, 2)
 # ==========================
 
 # 出会う異性の数 (人)
@@ -14,7 +16,7 @@ n = st.slider("出会う異性の人数（人）: n", n_min, n_max, n0)
 
 # p: 1人から好かれる確率（%）
 perc_min, perc_max, perc0 = 0, 100, 1
-p = (1/100) * st.slider("1人の異性から好かれる確率（％）: p", perc_min, perc_max, perc0)
+p = st.slider("1人の異性から好かれる確率（％）: p", perc_min, perc_max, perc0)
 
 st.write(f"n={n}, p={p}")
 
